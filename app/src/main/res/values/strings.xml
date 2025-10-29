@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">midterm-app-dev</string>
+     <string name="foo">Foo</string>
 </resources>
