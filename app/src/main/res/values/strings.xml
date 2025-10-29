@@ -1,3 +1,18 @@
-<resources>
-    <string name="app_name">midterm-app-dev</string>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base theme -->
+    <style name="Theme.MenuApp" parent="Theme.Material3.Light.NoActionBar">
+        <item name="android:colorBackground">@color/colorBackground</item>
+        <item name="android:textColor">@color/colorTextPrimary</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorSecondary">@color/colorSecondary</item>
+        <item name="android:statusBarColor">@color/colorPrimary</item>
+        <item name="android:navigationBarColor">@color/colorBackground</item>
+    </style>
+
+    <!-- Button Style -->
+    <style name="RoundedButton">
+        <item name="android:background">@drawable/rounded_bg_light</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textStyle">bold</item>
+    </style>
 </resources>
