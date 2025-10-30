@@ -30,6 +30,7 @@ class LoginActivity : AppCompatActivity() {
 
             if (users.containsKey(username) && users[username] == password) {
                 val intent = Intent(this, MainActivity::class.java)
+                intent.putExtra("USERNAME", username)
                 startActivity(intent)
                 finish()
             } else {

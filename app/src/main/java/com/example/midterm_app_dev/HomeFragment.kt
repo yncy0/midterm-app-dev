@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.LinearLayout
+import android.widget.TextView
 import androidx.fragment.app.Fragment
 import com.example.midterm_app_dev.model.FoodItem
 
@@ -18,6 +19,10 @@ class HomeFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.activity_home, container, false)
+
+        val username = arguments?.getString("USERNAME")
+        val greetingTextView = view.findViewById<TextView>(R.id.greeting_text)
+        greetingTextView.text = "Hi, ${username?.replaceFirstChar { it.uppercase() }}"
 
         val dessertButton: Button = view.findViewById(R.id.button_dessert)
         dessertButton.setOnClickListener {
