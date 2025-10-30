@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import com.example.midterm_app_dev.model.Cart
@@ -27,11 +28,16 @@ class CartFragment : Fragment() {
 
         val cartAdapter = CartAdapter(Cart.items)
         cartRecyclerView.adapter = cartAdapter
-        
+
         updateSubtotal(subtotalTextView)
 
         reviewPaymentButton.setOnClickListener {
+            Toast.makeText(requireContext(), "Items added to your order!", Toast.LENGTH_SHORT).show()
             OrderSummary.setOrderItems(Cart.items)
+            Cart.items.clear()
+            cartAdapter.notifyDataSetChanged()
+            updateSubtotal(subtotalTextView)
+
             parentFragmentManager.beginTransaction()
                 .replace(R.id.fragment_container, OrdersFragment())
                 .addToBackStack(null)
