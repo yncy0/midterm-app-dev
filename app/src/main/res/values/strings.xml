@@ -1,3 +1,6 @@
+<resources>
+    <string name="app_name">MENU</string>
+</resources>
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base theme -->
     <style name="Theme.MenuApp" parent="Theme.Material3.Light.NoActionBar">
