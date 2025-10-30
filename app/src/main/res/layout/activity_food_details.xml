@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="center_horizontal">
+
+        <!-- Back Arrow -->
+        <ImageView
+            android:id="@+id/backArrow"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/ic_back_arrow"
+            android:contentDescription="Back"
+            android:layout_gravity="start" />
+
+        <!-- Pizza Image -->
+        <ImageView
+            android:id="@+id/pizzaImage"
+            android:layout_width="260dp"
+            android:layout_height="260dp"
+            android:layout_marginTop="24dp"
+            android:src="@drawable/pizza_cheese"
+            android:contentDescription="Cheese Pizza"
+            android:adjustViewBounds="true" />
+
+        <!-- Pizza name -->
+        <TextView
+            android:id="@+id/pizzaName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Cheese Pizza"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal" />
+
+        <!-- Price (separate from name) -->
+        <TextView
+            android:id="@+id/pizzaPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="₱250.00"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="@color/orange"
+            android:layout_marginTop="4dp"
+            android:layout_gravity="center_horizontal" />
+
+        <!-- Quantity Selector -->
+        <LinearLayout
+            android:id="@+id/quantityLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/minusButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="-"
+                android:textColor="@color/black"
+                android:backgroundTint="@color/peach" />
+
+            <TextView
+                android:id="@+id/quantityText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginHorizontal="16dp"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/plusButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="+"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/orange" />
+        </LinearLayout>
+
+        <!-- Ingredient icons -->
+        <LinearLayout
+            android:id="@+id/ingredientIcons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="4">
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:src="@drawable/ic_cheese"
+                android:contentDescription="Cheese" />
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:src="@drawable/ic_tomato"
+                android:contentDescription="Tomato" />
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:src="@drawable/ic_basil"
+                android:contentDescription="Basil" />
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:src="@drawable/ic_olive"
+                android:contentDescription="Olives" />
+        </LinearLayout>
+
+        <!-- Description -->
+        <TextView
+            android:id="@+id/pizzaDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="A classic cheese pizza topped with rich mozzarella, fresh basil, and savory tomato sauce."
+            android:textSize="15sp"
+            android:textColor="@color/gray"
+            android:gravity="center" />
+
+        <!-- Add to Cart Button -->
+        <Button
+            android:id="@+id/addToCartButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:backgroundTint="@color/orange"
+            android:text="Add to Cart"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:padding="12dp" />
+
+        <!-- Cart Confirmation Banner -->
+        <LinearLayout
+            android:id="@+id/cartConfirmation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:background="@color/peach"
+            android:padding="12dp"
+            android:layout_marginTop="16dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_heart_outline"
+                app:tint="@color/orange"
+                android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Added to Cart!"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="@color/orange" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
