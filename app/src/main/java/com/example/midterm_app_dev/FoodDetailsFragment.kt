@@ -6,8 +6,10 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import com.example.midterm_app_dev.model.Cart
 import com.example.midterm_app_dev.model.FoodItem
 
 class FoodDetailsFragment : Fragment() {
@@ -31,6 +33,8 @@ class FoodDetailsFragment : Fragment() {
         val plusButton: Button = view.findViewById(R.id.plusButton)
         val minusButton: Button = view.findViewById(R.id.minusButton)
         val quantityText: TextView = view.findViewById(R.id.quantityText)
+        val addToCartButton: Button = view.findViewById(R.id.addToCartButton)
+        val cartConfirmation: LinearLayout = view.findViewById(R.id.cartConfirmation)
 
         if (foodItem != null) {
             pizzaImage.setImageResource(foodItem.imageResId)
@@ -52,6 +56,13 @@ class FoodDetailsFragment : Fragment() {
             if (quantity > 1) {
                 quantity--
                 quantityText.text = quantity.toString()
+            }
+        }
+
+        addToCartButton.setOnClickListener {
+            if (foodItem != null) {
+                Cart.addItem(foodItem, quantity)
+                cartConfirmation.visibility = View.VISIBLE
             }
         }
 
