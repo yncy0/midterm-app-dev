@@ -12,9 +12,7 @@
     <color name="light_gray">#F6F6F6</color>
     <color name="orange">#F57C00</color>
     <color name="peach">#FFE1CC</color>
-</resources>
 
-    <!-- Material3 required mappings -->
     <color name="colorPrimary">@color/orange</color>
     <color name="colorSecondary">@color/peach</color>
     <color name="colorBackground">@color/white</color>
@@ -23,4 +21,3 @@
     <color name="colorSurface">@color/light_gray</color>
     <color name="colorOnSurface">@color/black</color>
 </resources>
-
