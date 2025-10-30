@@ -4,10 +4,12 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import com.example.midterm_app_dev.model.Cart
+import com.example.midterm_app_dev.model.OrderSummary
 
 class CartFragment : Fragment() {
 
@@ -21,11 +23,20 @@ class CartFragment : Fragment() {
 
         val cartRecyclerView: RecyclerView = view.findViewById(R.id.cartRecyclerView)
         val subtotalTextView: TextView = view.findViewById(R.id.subtotalTextView)
+        val reviewPaymentButton: Button = view.findViewById(R.id.reviewPaymentButton)
 
         val cartAdapter = CartAdapter(Cart.items)
         cartRecyclerView.adapter = cartAdapter
         
         updateSubtotal(subtotalTextView)
+
+        reviewPaymentButton.setOnClickListener {
+            OrderSummary.setOrderItems(Cart.items)
+            parentFragmentManager.beginTransaction()
+                .replace(R.id.fragment_container, OrdersFragment())
+                .addToBackStack(null)
+                .commit()
+        }
 
         return view
     }
