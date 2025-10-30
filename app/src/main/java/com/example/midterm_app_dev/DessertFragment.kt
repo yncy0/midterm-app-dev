@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import androidx.fragment.app.Fragment
 
-class HomeFragment : Fragment() {
+class DessertFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -15,12 +15,19 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val view = inflater.inflate(R.layout.activity_home, container, false)
+        val view = inflater.inflate(R.layout.activity_dessert, container, false)
 
-        val dessertButton: Button = view.findViewById(R.id.button_dessert)
-        dessertButton.setOnClickListener {
+        val allButton: Button = view.findViewById(R.id.button_all)
+        allButton.setOnClickListener {
             parentFragmentManager.beginTransaction()
-                .replace(R.id.fragment_container, DessertFragment())
+                .replace(R.id.fragment_container, HomeFragment())
+                .commit()
+        }
+
+        val pizzaButton: Button = view.findViewById(R.id.button_pizza)
+        pizzaButton.setOnClickListener {
+            parentFragmentManager.beginTransaction()
+                .replace(R.id.fragment_container, HomeFragment())
                 .commit()
         }
 

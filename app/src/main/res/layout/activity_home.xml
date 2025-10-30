@@ -127,12 +127,14 @@
         app:layout_constraintEnd_toEndOf="parent">
 
         <Button
+            android:id="@+id/button_all"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="ALL"
             android:background="@drawable/rounded_bg_light" />
 
         <Button
+            android:id="@+id/button_pizza"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="PIZZA"
@@ -140,6 +142,7 @@
             android:layout_marginStart="8dp" />
 
         <Button
+            android:id="@+id/button_dessert"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="DESSERT"
@@ -147,6 +150,7 @@
             android:layout_marginStart="8dp" />
 
         <Button
+            android:id="@+id/button_drinks"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="DRINKS"
