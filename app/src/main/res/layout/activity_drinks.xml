@@ -186,6 +186,7 @@
 
                 <!-- Coke -->
                 <LinearLayout
+                    android:id="@+id/coke"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
@@ -216,6 +217,7 @@
 
                 <!-- Fruit Shake -->
                 <LinearLayout
+                    android:id="@+id/fruit_shake"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
@@ -254,6 +256,7 @@
 
                 <!-- Sago't Gulaman -->
                 <LinearLayout
+                    android:id="@+id/sago_gulaman"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
@@ -284,6 +287,7 @@
 
                 <!-- Coffee -->
                 <LinearLayout
+                    android:id="@+id/coffee"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"

@@ -186,6 +186,7 @@
 
                 <!-- Hawaiian -->
                 <LinearLayout
+                    android:id="@+id/hawaiian_pizza"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
@@ -216,6 +217,7 @@
 
                 <!-- Cheese -->
                 <LinearLayout
+                    android:id="@+id/cheese_pizza"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
@@ -254,6 +256,7 @@
 
                 <!-- Pepperoni -->
                 <LinearLayout
+                    android:id="@+id/pepperoni_pizza"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
@@ -284,6 +287,7 @@
 
                 <!-- Veggie -->
                 <LinearLayout
+                    android:id="@+id/veggie_pizza"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"

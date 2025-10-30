@@ -187,6 +187,7 @@
 
                 <!-- Halo-Halo -->
                 <LinearLayout
+                    android:id="@+id/halo_halo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
@@ -217,6 +218,7 @@
 
                 <!-- Suman -->
                 <LinearLayout
+                    android:id="@+id/suman"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
@@ -255,6 +257,7 @@
 
                 <!-- Banana Que -->
                 <LinearLayout
+                    android:id="@+id/banana_que"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
@@ -285,6 +288,7 @@
 
                 <!-- Leche Flan -->
                 <LinearLayout
+                    android:id="@+id/leche_flan"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
